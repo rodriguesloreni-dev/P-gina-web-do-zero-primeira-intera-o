@@ -13,6 +13,7 @@ text-align: center;
 max-width: 800px;
 margin: 0 auto;
 padding: 16px;
+border: 5px solid aliceblue ;
 }
 main {
     background-color: #FFFFFF;
@@ -23,15 +24,22 @@ main {
     display: flex;
 }
  img{
-    width: 80px;
-    height: 80px;
- }
- .artigo-autor {
+   background-color: #ca469a(253, 195, 253);
+   color: #ca469a;
+   text-align: center;
+   max-width: 800px;
+   max-width: 0 auto;
+   padding: 16px;
+   display: flex;
+}
+img{
+height: 80px;
+width: 80px;
+}
+.artigo-autor {
     font-weight: bold;
  }
     </style>
-</head>
-<body>
     <header>
 
        <h1>minha loja de acessórios</h1>
@@ -45,10 +53,26 @@ main {
   Óculos de Sol: Modelo ao ar livre usando óculos de sol com armação de acetato tartaruga e lentes marrons estilo gatinho.">
 <div>
 
-<h2>meu primeiro post</h2>
 <p class= " artigo-aulto">Por: Loreni</p>
 <p>olá seja bem-vindo(a) minha loja! aqui vou compartilha ideias de divulgação, promoções e atendimento ao cliente.</p>
-<button>❤️</button>
+<p>olá seja bem-vindo(a) minha loja! aqui vou compartilha ideias de divulgação, promoções e atendimento ao cliente.</p>
+<button>​💖​<span>0</span></button>
+<button>👍​<span>0</span></button>
 </div>
+
+</main>
+
 </body>
-</html>
+
+<script>
+
+const botoes = document.querySelectorAll("button");
+botao.addEventListener("clik", botaoClicado);
+
+function botaoClicado(){
+console.log("fuiclicado");
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
+
+</script>
