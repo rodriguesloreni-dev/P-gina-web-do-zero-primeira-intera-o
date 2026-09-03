@@ -23,21 +23,39 @@
         }
         article {
             display: flex;
+            align-items: flex-start; /* Alinha a imagem no topo do texto */
             margin-bottom: 20px;
         }
         img {
             background-color: #fdc3fd;
             color: #ca469a;
             text-align: center;
-            padding: 16px;
+            padding: 8px;
             height: 80px;
             width: 80px;
+            margin-right: 16px; /* Adiciona espaço entre a imagem e o texto */
+            object-fit: cover; /* Evita que a imagem fique distorcida */
+            flex-shrink: 0; /* Impede que a imagem encolha */
         }
         .artigo-autor {
             font-weight: bold;
         }
         button {
             cursor: pointer;
+            font-size: 16px; /* Aumenta o tamanho da fonte e dos ícones */
+            padding: 8px 16px; /* Aumenta o tamanho interno do botão */
+            background-color: #fdc3fd;
+            color: #ca469a;
+            border: 1px solid #ca469a;
+            border-radius: 6px;
+            margin-right: 8px; /* Separa os botões um do outro */
+            display: inline-flex;
+            align-items: center;
+            gap: 6px; /* Espaço entre o emoji e o número */
+        }
+        button:hover {
+            background-color: #ca469a;
+            color: #FFFFFF;
         }
     </style>
 </head>
@@ -75,12 +93,17 @@
         const botoes = document.querySelectorAll("button");
 
         botoes.forEach(function(botao) {
-          let curtiu = false;
-            botao.addEventListener("click", function() {
+            let curtiu = false;
+            botao.addEventListener("click", function botaoClicado() {
+                console.log("fui clicado");
                 let texto = botao.querySelector("span");
-                if(curtiu === false){
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
                 }
-                texto.textContent = parseInt(texto.textContent) + 1;
             });
         });
     </script>
