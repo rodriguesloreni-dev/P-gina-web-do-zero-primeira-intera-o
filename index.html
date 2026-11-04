@@ -1,108 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loja de acessórios</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        header {
-            background-color: #ca469a;
-            color: #FFFFFF;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-            border: 5px solid aliceblue;
-        }
-        main {
-            background-color: #FFFFFF;
-            color: #ca469a;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-        article {
-            display: flex;
-            align-items: flex-start; /* Alinha a imagem no topo do texto */
-            margin-bottom: 20px;
-        }
-        img {
-            background-color: #fdc3fd;
-            color: #ca469a;
-            text-align: center;
-            padding: 8px;
-            height: 80px;
-            width: 80px;
-            margin-right: 16px; /* Adiciona espaço entre a imagem e o texto */
-            object-fit: cover; /* Evita que a imagem fique distorcida */
-            flex-shrink: 0; /* Impede que a imagem encolha */
-        }
-        .artigo-autor {
-            font-weight: bold;
-        }
-        button {
-            cursor: pointer;
-            font-size: 16px; /* Aumenta o tamanho da fonte e dos ícones */
-            padding: 8px 16px; /* Aumenta o tamanho interno do botão */
-            background-color: #fdc3fd;
-            color: #ca469a;
-            border: 1px solid #ca469a;
-            border-radius: 6px;
-            margin-right: 8px; /* Separa os botões um do outro */
-            display: inline-flex;
-            align-items: center;
-            gap: 6px; /* Espaço entre o emoji e o número */
-        }
-        button:hover {
-            background-color: #ca469a;
-            color: #FFFFFF;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog</title>
+<style>
+:root{
+--cor-primaria: #c520ca;
+--cor-secundaria: #d429e4;
+--cor-fundo: #ffffff;
+--cor-texto: #151428;
+--cor-constraste: #f3eef7;
+--cor-botao: #f9f9f9;
+}
+
+body {
+max-width: 100vw;
+}
+
+header {
+background-color: #c520ca;
+color: #FFFFFF;
+text-align: center;
+margin: 0 auto;
+padding: 16px;
+
+}
+
+main {
+background-color: #FFFFFF;
+color: #c520ca;
+margin: 0 auto;
+padding: 16px;
+
+display: flex;
+flex-wrap: wrap;
+}
+article{
+display: flex;
+
+border: 1px solid #c520ca;
+margin: 16px;
+gap: 16px;
+padding: 16px;
+
+flex: 1 1 30%;
+}
+img {
+width: 80px;
+height: 80px;
+}
+
+.artigo-autor {
+font-weight: bold;
+}
+</style>
+
 </head>
+
 <body>
-    <header>
-        <h1>minha loja de acessórios</h1>
-        <p>esta página é para vender acessórios e nela os clientes poderão conhecer diferentes produtos</p> 
-    </header>
+<header>
+<h1>Minha loja de acessorio</h1>
+<p>Vou Compartilhar conhecimentos sobre
+joias</p>
+</header>
+<main>
+<article>
+<img src="flor.png" alt="
+">
+<div>
+<h2>Meu primeiro post</h2>
+<p class="artigo-autor"> Por: loreni</p>
+<p>ola sejam bem vindos a minha loja de acessorio aqui vou Compartilhar algumas joias para vocês.</p>
 
-    <main>
-        <article>
-            <img src="flor.png" alt="Acessórios da loja">
-            <div>
-                <h2>meu primeiro post</h2>
-                <p class="artigo-autor">Por: Loreni</p>
-                <p>olá seja bem-vindo(a) minha loja! aqui vou compartilhar ideias de divulgação, promoções e atendimento ao cliente.</p>
-                <button>💖 <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+<article>
+<img src="acessorio.jpg" alt=".">
+<div>
+<h2>Mouse Antigo</h2>
+<p class="artigo-autor"> Por: loreni</p>
+<p></p>
 
-        <article>
-            <img src="acessorio.jpg" alt="Acessórios da loja">
-            <div>
-                <h2>meu segundo post</h2>
-                <p class="artigo-autor">Por: Loreni</p>
-                <p>"Joias douradas: a sofisticação atemporal que transforma qualquer look simples em uma produção marcante."</p>
-              <button>💖 <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
-        <article>
-            <img src="perfume.jpeg" alt="Acessórios da loja">
-            <div>
-                <h2>meu segundo post</h2>
-                <p class="artigo-autor">Por: Loreni</p>
-                <p>Além de joias exclusivas, agora você também encontra perfumes marcantes para completar o seu estilo.</p>
-                <button>💖 <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
-    </main>
-    
-<script src="script.js"></script>
-    <script>
-        
-    </script>
+<p class="artigo-fonte">Fonte:Google</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+<article>
+<img src="perfume.jpeg" alt=".">
+<div>
+<h2>teclado antigo</h2>
+<p class="artigo-autor"> Por: Myguel</p>
+<p>teclado usado antigamente</p>
+
+<p class="artigo-fonte">Fonte:Google</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+<article>
+<img src="monitor-antigo-0.jpg" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>Monitor antigo</h2>
+<p class="artigo-autor"> Por: Myguel</p>
+<p>monitor antigo era maior e quadrado</p>
+
+<p class="artigo-fonte">Fonte:Google</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+<article>
+<img src="gabinete.jpeg" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>gabinete antigo</h2>
+<p class="artigo-autor"> Por: Myguel</p>
+<p>gabinete antigo não tinha boa passagem de ar e ventilação</p>
+
+<p class="artigo-fonte">Fonte:Google</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+<article>
+<img src="camera antiga.jpeg" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>Camera antiga</h2>
+<p class="artigo-autor"> Por: Myguel</p>
+<p>camera muito velha</p>
+
+<p class="artigo-fonte">Fonte:Google</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+<article>
+<img src="placa-mae-chinesa.webp" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>placa mãe antiga</h2>
+<p class="artigo-autor"> Por: Myguel</p>
+<p>placa mãe antiga usada por chineses</p>
+
+<p class="artigo-fonte">Fonte:Google</p>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+</main>
 </body>
+<script>
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function (botao) {
+let curtiu = false;
+botao.addEventListener("click", botaoclicado);
+function botaoclicado() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+if (curtiu === false){
+texto.textContent++;
+curtiu = true;
+}else{
+texto.textContent--;
+curtiu = false;
+}
+}
+})
+
+</script>
+
 </html>
