@@ -2,101 +2,151 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>loja</title>
-<style>
-:root{
---cor-primaria: #fdc3fd;
---cor-secundaria: #ca469c;
---cor-fundo: #ffffff;
---cor-texto: #151428;
---cor-constraste: #f3eef7;
---cor-botao: #f9f9f9;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja</title>
+  <style>
+    :root {
+      --cor-primaria: #fc4abe;
+      --cor-secundaria: #ca469c;
+      --cor-fundo: #ffffff;
+      --cor-texto: #151428;
+      --cor-constraste: #f3eef7;
+      --cor-botao: #f9f9f9;
+    }
 
-body {
-max-width: 100vw;
-}
+    body {
+      max-width: 100vw;
+      margin: 0;
+      font-family: sans-serif;
+    }
 
-header {
-background-color: #fdc3fd;
-color: #FFFFFF;
-text-align: center;
-margin: 0 auto;
-padding: 16px;
+    header {
+      background-color: var(--cor-primaria);
+      color: #FFFFFF;
+      text-align: center;
+      margin: 0 auto;
+      padding: 16px;
+    }
 
-}
+    main {
+      background-color: var(--cor-fundo);
+      color: var(--cor-secundaria);
+      margin: 0 auto;
+      padding: 16px;
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-main {
-background-color: #FFFFFF;
-color: #ca469c;
-margin: 0 auto;
-padding: 16px;
+    article {
+      display: flex;
+      border: 1px solid var(--cor-secundaria);
+      border-radius: 8px;
+      margin: 16px;
+      gap: 16px;
+      padding: 16px;
+      flex: 1 1 30%;
+    }
 
-display: flex;
-flex-wrap: wrap;
-}
-article{
-display: flex;
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
 
-border: 1px solid #ca469c;
-margin: 16px;
-gap: 16px;
-padding: 16px;
+    .artigo-autor {
+      font-weight: bold;
+    }
 
-flex: 1 1 30%;
-}
-img {
-width: 80px;
-height: 80px;
-}
+    /* Estilo dos botões de like */
+    .botoes-like {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+    }
 
-.artigo-autor {
-font-weight: bold;
-}
-</style>
+    button {
+      background-color: var(--cor-botao);
+      border: 1px solid var(--cor-secundaria);
+      color: var(--cor-texto);
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s, transform 0.1s;
+    }
 
+    button:hover {
+      background-color: var(--cor-constraste);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
 </head>
 
 <body>
-<header>
-<h1>Minha loja de acessorio</h1>
-<p>Vou Compartilhar conhecimentos sobre
-joias</p>
-</header>
-<main>
-<article>
-<img src="flor.png" alt="
-">
-<div>
-<h2>Meu primeiro post</h2>
-<p class="artigo-autor"> Por: loreni</p>
-<p>olá sejam bem vindos a minha loja de acessório aqui vou Compartilhar algumas joias para vocês.</p>
+  <header>
+    <h1>Minha loja de acessórios</h1>
+    <p>Vou compartilhar conhecimentos sobre joias</p>
+  </header>
 
-<button>❤️ <span>0</span></button>
-<button>👍 <span>0</span></button>
-</div>
-</article>
-<article>
-<img src="acessorio.jpg" alt=".">
-<div>
-<h2>joias</h2>
-<p class="artigo-autor"> Por: loreni</p>
-<p></p>
+  <main>
+    <article>
+      <img src="flor.png" alt="Flor">
+      <div>
+        <h2>Meu primeiro post</h2>
+        <p class="artigo-autor">Por: loreni</p>
+        <p>Olá, sejam bem-vindos à minha loja de acessórios! Aqui vou compartilhar algumas joias para vocês.</p>
+        <div class="botoes-like">
+          <button class="btn-like">❤️ <span>0</span></button>
+          <button class="btn-like">👍 <span>0</span></button>
+        </div>
+      </div>
+    </article>
 
-<p class="artigo-fonte">Aqui na loja tem varias opções de joias quanto dourada quanto prata</p>
+    <article>
+      <img src="acessorio.jpg" alt="Acessório">
+      <div>
+        <h2>Joias</h2>
+        <p class="artigo-autor">Por: loreni</p>
+        <p class="artigo-fonte">"Joias douradas: a sofisticação atemporal que transforma qualquer look simples em uma produção marcante."</p>
+        <div class="botoes-like">
+          <button class="btn-like">❤️ <span>0</span></button>
+          <button class="btn-like">👍 <span>0</span></button>
+        </div>
+      </div>
+    </article>
 
-<button>❤️ <span>0</span></button>
-<button>👍 <span>0</span></button>
-</div>
-</article>
-<article>
-<img src="perfume.jpeg" alt=".">
-<div>
-<h2>perfume</h2>
-<p class="artigo-autor"> Por:loreni</p>
-<p> Além de joias vai ter perfume para vocês ficar bem perfumados
-    <button>❤️ <span>0</span></button>
-    <button>👍 <span>0</span></button>
-    
+    <article>
+      <img src="perfume.jpeg" alt="Perfume">
+      <div>
+        <h2>Perfume</h2>
+        <p class="artigo-autor">Por: loreni</p>
+        <p>"Além de nossas joias exclusivas, agora você também encontra perfumes marcantes para completar a sua produção."</p>
+        <div class="botoes-like">
+          <button class="btn-like">❤️ <span>0</span></button>
+          <button class="btn-like">👍 <span>0</span></button>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    // Seleciona todos os botões com a classe 'btn-like'
+    const botoes = document.querySelectorAll('.btn-like');
+
+    // Adiciona o evento de clique em cada botão
+    botoes.forEach(botao => {
+      botao.addEventListener('click', () => {
+        const contador = botao.querySelector('span');
+        let valorAtual = parseInt(contador.textContent);
+        contador.textContent = valorAtual + 1;
+      });
+    });
+  </script>
+</body>
+
+</html>
