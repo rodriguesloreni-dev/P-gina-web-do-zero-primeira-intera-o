@@ -11,14 +11,28 @@
       --cor-secundaria: #ca469c;
       --cor-fundo: #ffffff;
       --cor-texto: #151428;
-      --cor-constraste: #f3eef7;
+      --cor-contraste: #f3eef7;
       --cor-botao: #f9f9f9;
+    }
+
+    /* Variáveis do Modo Escuro */
+    body.modo-escuro {
+      --cor-primaria: #9e1b6e;
+      --cor-secundaria: #ff77d0;
+      --cor-fundo: #151428;
+      --cor-texto: #f3eef7;
+      --cor-contraste: #2b294a;
+      --cor-botao: #211f3b;
     }
 
     body {
       max-width: 100vw;
+      min-height: 100vh;
       margin: 0;
       font-family: sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      transition: background-color 0.3s, color 0.3s;
     }
 
     header {
@@ -27,25 +41,58 @@
       text-align: center;
       margin: 0 auto;
       padding: 16px;
+      position: relative;
+    }
+
+    /* Estilo específico para o botão de tema */
+    #btn-tema {
+      margin-top: 8px;
+      font-weight: bold;
     }
 
     main {
       background-color: var(--cor-fundo);
       color: var(--cor-secundaria);
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 24px;
       display: flex;
       flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      transition: background-color 0.3s;
     }
 
     article {
       display: flex;
       border: 1px solid var(--cor-secundaria);
       border-radius: 8px;
-      margin: 16px;
       gap: 16px;
       padding: 16px;
-      flex: 1 1 30%;
+      flex: 1 1 42%;
+      min-width: 300px;
+      box-sizing: border-box;
+    }
+
+    /* Faz o conteúdo interno esticar para alinhar os botões no rodapé do cartão */
+    article > div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    article h2 {
+      margin-top: 0;
+    }
+
+    article p {
+      color: var(--cor-texto);
+    }
+
+    .artigo-autor {
+      font-weight: bold;
+      color: var(--cor-secundaria);
+      margin-top: 0;
     }
 
     img {
@@ -53,15 +100,13 @@
       height: 80px;
       object-fit: cover;
       border-radius: 8px;
-    }
-
-    .artigo-autor {
-      font-weight: bold;
+      flex-shrink: 0;
     }
 
     /* Estilo dos botões de like */
     .botoes-like {
-      margin-top: 12px;
+      margin-top: auto;
+      padding-top: 12px;
       display: flex;
       gap: 8px;
     }
@@ -78,7 +123,7 @@
     }
 
     button:hover {
-      background-color: var(--cor-constraste);
+      background-color: var(--cor-contraste);
     }
 
     button:active {
@@ -91,6 +136,7 @@
   <header>
     <h1>Minha loja de acessórios</h1>
     <p>Vou compartilhar conhecimentos sobre joias</p>
+    <button id="btn-tema">🌙 Modo Escuro</button>
   </header>
 
   <main>
@@ -132,18 +178,52 @@
         </div>
       </div>
     </article>
+
+    <article>
+      <img src="makes.jpeg" alt="Maquiagens">
+      <div>
+        <h2>Makes</h2>
+        <p class="artigo-autor">Por: loreni</p>
+        <p>"Aquele toque final que faltava chegou! Agora a nossa loja também conta com makes maravilhosas para você arrasar."</p>
+        <div class="botoes-like">
+          <button class="btn-like">❤️ <span>0</span></button>
+          <button class="btn-like">👍 <span>0</span></button>
+        </div>
+      </div>
+    </article>
   </main>
 
   <script>
-    // Seleciona todos os botões com a classe 'btn-like'
+    // Lógica do Modo Escuro
+    const btnTema = document.getElementById('btn-tema');
+    
+    btnTema.addEventListener('click', () => {
+      document.body.classList.toggle('modo-escuro');
+      
+      if (document.body.classList.contains('modo-escuro')) {
+        btnTema.textContent = '☀️ Modo Claro';
+      } else {
+        btnTema.textContent = '🌙 Modo Escuro';
+      }
+    });
+
+    // Lógica dos botões de like (1 curtida por pessoa / zera ao clicar de novo)
     const botoes = document.querySelectorAll('.btn-like');
 
-    // Adiciona o evento de clique em cada botão
     botoes.forEach(botao => {
+      let curtiu = false;
+
       botao.addEventListener('click', () => {
         const contador = botao.querySelector('span');
         let valorAtual = parseInt(contador.textContent);
-        contador.textContent = valorAtual + 1;
+
+        if (!curtiu) {
+          contador.textContent = valorAtual + 1;
+          curtiu = true;
+        } else {
+          contador.textContent = valorAtual - 1;
+          curtiu = false;
+        }
       });
     });
   </script>
